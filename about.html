@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <link rel="stylesheet" type="text/css" href="style/signup.css">
+  </head>
+  <body class = "back">
+  <div class = "container">
+    <form action="Signup" class="form" id = "bg-color" Method = "POST">
+        
+        <div class="card">
+            
+            <a class="signup">Sign up</a>
+            <div class="categories">
+            <div class="category-choice">
+            <input class ="choice" type="checkbox" value="Residential" name = "residential" onclick="checkedOnClick(this);"/>
+            <label for="resident"> Residential </label><br>
+        </div>
+        <div class="category-choice">
+           <input class ="choice" type="checkbox" value="commercial" name = "commercial" onclick="checkedOnClick(this);" />
+            <label for="buisness"> Commercial</label><br>
+        </div>
+        <div class="category-choice">
+            <input class="choice" type="checkbox" value="Industry" name = "industry" onclick="checkedOnClick(this);" />
+            <label for="Industry"> Industry </label><br>
+        </div>
+        </div>
+            <div class="inputBox">
+                <input type="text"  name = "fullname" required />
+                <span class="user">Fullname</span>
+            </div>
+    
+            <div class="inputBox">
+                <input type="text" name="companyname"  />
+                <span class="user">company name</span>
+            </div>
+
+             <div class="inputBox">
+                 <input type="email" name = "email" required />
+
+                  <span class="user">Email</span>
+            </div>
+            <div class="inputBox">
+                <input type="text"  name = "phone" required />
+    
+                    <span class="user">phone number</span>
+                </div>
+                <div class="inputBox">
+                    <input type="text"  name = "address" required />
+        
+                        <span class="user">Address</span>
+                    </div>
+      
+                    <div class="inputBox">
+                        <input type="password" name = "password" required />
+            
+                            <span class="user">password</span>
+                        </div>  
+     
+    
+     
+      <input type="submit" value="Sign Up" class="enter"/>
+    </div>
+   
+    </form>
+     </div>
+<!-- Script -->
+   <script type="text/javascript">
+   function checkedOnClick(el){
+
+      // Select all checkboxes by class
+      var checkboxesList = document.getElementsByClassName("choice");
+      for (var i = 0; i < checkboxesList.length; i++) {
+         checkboxesList.item(i).checked = false; // Uncheck all checkboxes
+      }
+
+      el.checked = true; // Checked clicked checkbox
+   }
+   </script>
+  </body>
+</html>
+
